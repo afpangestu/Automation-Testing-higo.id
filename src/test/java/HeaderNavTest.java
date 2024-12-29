@@ -45,7 +45,7 @@ public class HeaderNavTest {
     }
 
     @Test(priority = 3)
-    public void serviceHigoTest() throws InterruptedException {
+    public void navServiceHigoTest() throws InterruptedException {
         headerNav = new HeaderNavPage(driver);
         headerNav.clickHigoServices();
         headerNav.clickServiceWA();
