@@ -8,6 +8,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import page.FooterPage;
 
+import java.util.ArrayList;
+
 public class FooterTest {
     WebDriver driver;
     FooterPage footerPage;
@@ -129,6 +131,7 @@ public class FooterTest {
         footerPage.clickCareer();
         Thread.sleep(2000);
         Assert.assertEquals(driver.getCurrentUrl(), BaseUrl.higo_career);
+        driver.navigate().back();
         System.out.println("==== Test Footer 'Click About HIGO' Success ====");
     }
 
@@ -141,13 +144,31 @@ public class FooterTest {
         System.out.println("==== Test Footer 'Click About HIGO' Success ====");
     }
 
-    @Test(priority = 15)
+    @Test(priority = 16)
     public void footerPrivacyTest() throws InterruptedException {
         footerPage = new FooterPage(driver);
         footerPage.clickPrivacy();
         Thread.sleep(2000);
         Assert.assertEquals(driver.getCurrentUrl(), BaseUrl.higo_privacy);
         System.out.println("==== Test Footer 'Click About HIGO' Success ====");
+    }
+
+    @Test(priority = 17)
+    public void footerBlogTest() throws InterruptedException {
+        footerPage = new FooterPage(driver);
+        footerPage.clickBlog();
+        Thread.sleep(2000);
+        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
+        // move to tab 2
+        driver.switchTo().window(tabs.get(1));
+        Thread.sleep(3000);
+        // assert the url
+        Assert.assertEquals(driver.getCurrentUrl(), BaseUrl.blog);
+        // close current tab (blog.higo.id)
+        driver.close();
+        // move to first tab (higo.id)
+        driver.switchTo().window(tabs.get(0));
+        System.out.println("==== Test Footer 'Click Blog HIGO' Success ====");
     }
 
     @AfterClass
