@@ -8,24 +8,17 @@ import org.testng.annotations.Test;
 import page.HeaderNavPage;
 
 public class BlogHigoTest {
-
     WebDriver driver;
     HeaderNavPage headerNav;
 
     @BeforeClass
-    public void setup() throws InterruptedException {
+    public void setup() {
         HeaderNavPage headerNav = new HeaderNavPage(driver);
         // open browser and url
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get(BaseUrl.blog);
         Assert.assertEquals(driver.getCurrentUrl(),BaseUrl.blog);
-        Thread.sleep(2000);
-//        if (headerNav.popUp()) {
-        Assert.assertNotNull(driver);
-//        headerNav.clickClosePopUp();
-        System.out.println("==== Pop Up successfully closed ====");
-//        }
     }
 
     @Test

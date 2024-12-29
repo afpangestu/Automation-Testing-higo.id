@@ -16,6 +16,7 @@ public class FooterTest {
 
     @BeforeClass
     public void setup() throws InterruptedException {
+        // open browser and url
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get(BaseUrl.baseUrl);
