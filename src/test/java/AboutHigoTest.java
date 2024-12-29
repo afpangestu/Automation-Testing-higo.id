@@ -26,7 +26,7 @@ public class AboutHigoTest {
     public void titleAboutTest() {
         aboutPage = new AboutPage(driver);
         Assert.assertTrue(aboutPage.getTitleAboutHigo());
-        System.out.println("==== Test About HIGO 'Title About' Success ====");
+        System.out.println("==== Test About HIGO 'Heading' Success ====");
     }
 
     @Test(priority = 2)
@@ -77,7 +77,7 @@ public class AboutHigoTest {
         aboutPage.clickBtnBePartHigo();
         Assert.assertEquals(driver.getCurrentUrl(), BaseUrl.higo_career);
         Thread.sleep(2000);
-        System.out.println("==== Test About HIGO 'Grow Together Image' Success ====");
+        System.out.println("==== Test About HIGO 'Click Button Be Part HIGO' Success ====");
     }
 
     @AfterClass

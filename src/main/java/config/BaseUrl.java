@@ -13,6 +13,7 @@ public class BaseUrl {
     public static String case_study = baseUrl + "case-study";
     public static String digital_reports = baseUrl + "annualreport2024";
     public static String contact_us = baseUrl + "contact-us";
+    public static String contact_us_wifi = baseUrl + "contact-us?q=wifi-advertising";
     public static String higo_services_wifi = baseUrl + "wifi-advertising";
     public static String higo_services_higospot = baseUrl + "higospot";
     public static String higo_services_ida = baseUrl + "integrated-digital-agency";
