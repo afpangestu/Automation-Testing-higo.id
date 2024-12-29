@@ -20,12 +20,12 @@ public class BaseUrl {
     public static String higo_lang_id = baseUrl + "/id";
     public static String higo_lang_en = baseUrl + "/en";
 
-
     // Footer
     public static String higo_linkedin = "https://www.linkedin.com/company/pt-higo-fitur-indonesia";
     public static String higo_facebook = "https://www.facebook.com/HIGOSPOTINDONESIA";
     public static String higo_instagram = "https://www.instagram.com/higo.id";
     public static String higo_x = "https://x.com/HIGO_spot";
+    public static String career = "https://www.linkedin.com/company/pt-higo-fitur-indonesia";
     public static String tos_id = baseUrl + "terms-of-use-higospot";
     public static String pnp_id = baseUrl + "privacy-policy-higospot";
 }
