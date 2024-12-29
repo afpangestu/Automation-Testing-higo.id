@@ -59,6 +59,13 @@ public class FooterTest {
         System.out.println("==== Test Footer 'Phone Contact' Success ====");
     }
 
+    @Test(priority = 6)
+    public void footerCopyright() {
+        footerPage = new FooterPage(driver);
+        Assert.assertEquals(footerPage.getCopyrightText(), StringValue.footerTxtCopyright);
+        System.out.println("==== Test Footer 'Copyright' Success ====");
+    }
+
     @AfterClass
     public void quit() {
         if (driver != null) {
