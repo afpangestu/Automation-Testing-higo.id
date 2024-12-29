@@ -22,9 +22,7 @@ public class StringValue {
 
     // Footer
     public static String footerTxtCompany = "PT HIGO FITUR INDONESIA";
-    public static String footerTxtAddress1 = "Jl. Panjang Raya, Kedoya Elok Plaza, Blok DA No.3-4,";
-    public static String footerTxtAddress2 = "RT.19/RW.4, South Kedoya, Kebonjeruk, West Jakarta City";
-    public static String footerTxtAddress3 = "Jakarta 11520";
+    public static String footerTxtAddress = "Jl. Panjang Raya, Kedoya Elok Plaza, Blok DA No.3-4,";
     public static String footerTxtEmail = "E: info@higo.id";
     public static String footerLinkTxtEmail = "mailto:info@higo.id";
     public static String footerTxtPhone = "P: (021) 5806860";

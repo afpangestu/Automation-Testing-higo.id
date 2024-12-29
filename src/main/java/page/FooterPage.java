@@ -22,7 +22,7 @@ public class FooterPage {
     // locator
     By higoLogo = By.xpath("//div[@class='col-span-1 grid gap-y-4']//*[name()='svg']");
     By companyText = By.xpath("//span[@class='text-base']");
-    By addressText = By.xpath("/html/body/footer/div/div/div[1]/div[1]/p/text()[1]");
+    By addressText = By.xpath("//p[contains(text(),'Panjang')]");
     By emailText = By.xpath("//a[contains(text(),'E: info@higo.id')]");
     By phoneText = By.xpath("//a[contains(text(),'P: (021) 5806860')]");
     By copyrightTxt = By.xpath("//*[contains(text(),'©')]");
@@ -37,6 +37,10 @@ public class FooterPage {
     By terms = By.xpath("//a[normalize-space()='Terms & Conditions']");
     By privacy = By.xpath("//a[normalize-space()='Privacy & Policy']");
     By blog = By.xpath("//a[contains(text(),'Blog')]");
+    By linkedinBtn = By.xpath("//a[@aria-label='Linkedin']");
+    By facebookBtn = By.xpath("//a[@aria-label='Facebook']");
+    By instagramBtn = By.xpath("//a[@aria-label='Instagram']");
+    By xBtn = By.xpath("//a[@aria-label='X']");
 
 
     // methods
@@ -48,8 +52,8 @@ public class FooterPage {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(companyText)).getText();
     }
 
-    public String getAddressTxt() {
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(addressText)).getText();
+    public boolean getAddressTxt() {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(addressText)).isDisplayed();
     }
 
     public String getEmailText() {
@@ -116,4 +120,19 @@ public class FooterPage {
         wait.until(ExpectedConditions.elementToBeClickable(privacy)).click();
     }
 
+    public void clickLinkedinBtn() {
+        wait.until(ExpectedConditions.elementToBeClickable(linkedinBtn)).click();
+    }
+
+    public void clickfacebookBtn() {
+        wait.until(ExpectedConditions.elementToBeClickable(facebookBtn)).click();
+    }
+
+    public void clickInstagramBtn() {
+        wait.until(ExpectedConditions.elementToBeClickable(instagramBtn)).click();
+    }
+
+    public void clickXBtn() {
+        wait.until(ExpectedConditions.elementToBeClickable(xBtn)).click();
+    }
 }

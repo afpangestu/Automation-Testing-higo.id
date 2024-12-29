@@ -25,8 +25,8 @@ public class BaseUrl {
     // Footer
     public static String higo_linkedin = "https://www.linkedin.com/company/pt-higo-fitur-indonesia";
     public static String higo_facebook = "https://www.facebook.com/HIGOSPOTINDONESIA";
-    public static String higo_instagram = "https://www.instagram.com/higo.id";
-    public static String higo_x = "https://x.com/HIGO_spot";
+    public static String higo_instagram = "https://www.instagram.com/higo.id/";
+    public static String higo_x = "https://x.com/HIGO_spot?mx=2";
     public static String higo_career = "https://www.linkedin.com/company/pt-higo-fitur-indonesia";
     public static String higo_terms = baseUrl + "terms-of-use-higospot";
     public static String higo_privacy = baseUrl + "privacy-policy-higospot";

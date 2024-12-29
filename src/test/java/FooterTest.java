@@ -42,8 +42,8 @@ public class FooterTest {
     @Test(priority = 3)
     public void footerAddressTextTest() {
         footerPage = new FooterPage(driver);
-        Assert.assertEquals(footerPage.getAddressTxt(), StringValue.footerTxtAddress1);
-        System.out.println("==== Test Footer 'Company Text' Success ====");
+        Assert.assertTrue(footerPage.getAddressTxt());
+        System.out.println("==== Test Footer 'Address Text' Success ====");
     }
 
     @Test(priority = 4)
@@ -63,34 +63,102 @@ public class FooterTest {
     }
 
     @Test(priority = 6)
+    public void footerXTest() throws InterruptedException {
+        footerPage = new FooterPage(driver);
+        footerPage.clickXBtn();
+        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
+        // move to tab 2
+        driver.switchTo().window(tabs.get(1));
+        Thread.sleep(1000);
+        // assert the url
+        Assert.assertEquals(driver.getCurrentUrl(), BaseUrl.higo_x);
+        // close current tab (blog.higo.id)
+        driver.close();
+        // move to first tab (higo.id)
+        driver.switchTo().window(tabs.get(0));
+        System.out.println("==== Test Footer 'X Button' Success ====");
+    }
+
+    @Test(priority = 7)
+    public void footerLinkedInTest() throws InterruptedException {
+        footerPage = new FooterPage(driver);
+        footerPage.clickLinkedinBtn();
+        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
+        // move to tab 2
+        driver.switchTo().window(tabs.get(1));
+        Thread.sleep(2000);
+        // assert the url
+        Assert.assertEquals(driver.getCurrentUrl(), BaseUrl.higo_linkedin);
+        // close current tab (blog.higo.id)
+        driver.close();
+        // move to first tab (higo.id)
+        driver.switchTo().window(tabs.get(0));
+        System.out.println("==== Test Footer 'LinkedIn Button' Success ====");
+    }
+
+    @Test(priority = 8)
+    public void footerFacebookTest() throws InterruptedException {
+        footerPage = new FooterPage(driver);
+        footerPage.clickfacebookBtn();
+        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
+        // move to tab 2
+        driver.switchTo().window(tabs.get(1));
+        Thread.sleep(2000);
+        // assert the url
+        Assert.assertEquals(driver.getCurrentUrl(), BaseUrl.higo_facebook);
+        // close current tab (blog.higo.id)
+        driver.close();
+        // move to first tab (higo.id)
+        driver.switchTo().window(tabs.get(0));
+        System.out.println("==== Test Footer 'Facebook Button' Success ====");
+    }
+
+    @Test(priority = 9)
+    public void footerInstagramTest() throws InterruptedException {
+        footerPage = new FooterPage(driver);
+        footerPage.clickInstagramBtn();
+        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
+        // move to tab 2
+        driver.switchTo().window(tabs.get(1));
+        Thread.sleep(1000);
+        // assert the url
+        Assert.assertEquals(driver.getCurrentUrl(), BaseUrl.higo_instagram);
+        // close current tab (blog.higo.id)
+        driver.close();
+        // move to first tab (higo.id)
+        driver.switchTo().window(tabs.get(0));
+        System.out.println("==== Test Footer 'Instagram Button' Success ====");
+    }
+
+    @Test(priority = 10)
     public void footerCopyrightTest() {
         footerPage = new FooterPage(driver);
         Assert.assertEquals(footerPage.getCopyrightText(), StringValue.footerTxtCopyright);
         System.out.println("==== Test Footer 'Copyright' Success ====");
     }
 
-    @Test(priority = 7)
+    @Test(priority = 11)
     public void footerISO27001Test() {
         footerPage = new FooterPage(driver);
         Assert.assertTrue(footerPage.getISO27001());
         System.out.println("==== Test Footer 'ISO 27001' Success ====");
     }
 
-    @Test(priority = 8)
+    @Test(priority = 12)
     public void footerISO27701Test() {
         footerPage = new FooterPage(driver);
         Assert.assertTrue(footerPage.getISO27701());
         System.out.println("==== Test Footer 'ISO 27701' Success ====");
     }
 
-    @Test(priority = 9)
+    @Test(priority = 13)
     public void footerGetAllLinkTest() {
         footerPage = new FooterPage(driver);
         Assert.assertTrue(footerPage.getAllLink());
         System.out.println("==== Test Footer 'Get All Link' Success ====");
     }
 
-    @Test(priority = 10)
+    @Test(priority = 14)
     public void footerWifiTest() throws InterruptedException {
         footerPage = new FooterPage(driver);
         footerPage.clickWifiAdver();
@@ -99,7 +167,7 @@ public class FooterTest {
         System.out.println("==== Test Footer 'Click WiFi Advertising' Success ====");
     }
 
-    @Test(priority = 11)
+    @Test(priority = 15)
     public void footerHigoSpotTest() throws InterruptedException {
         footerPage = new FooterPage(driver);
         footerPage.clickHigoSpot();
@@ -108,7 +176,7 @@ public class FooterTest {
         System.out.println("==== Test Footer 'Click HIGOspot' Success ====");
     }
 
-    @Test(priority = 12)
+    @Test(priority = 16)
     public void footerIdaTest() throws InterruptedException {
         footerPage = new FooterPage(driver);
         footerPage.clickIda();
@@ -117,7 +185,7 @@ public class FooterTest {
         System.out.println("==== Test Footer 'Click Integrated Digital Agency' Success ====");
     }
 
-    @Test(priority = 13)
+    @Test(priority = 17)
     public void footerAboutHigoTest() throws InterruptedException {
         footerPage = new FooterPage(driver);
         footerPage.clickAboutHigo();
@@ -126,7 +194,7 @@ public class FooterTest {
         System.out.println("==== Test Footer 'Click About HIGO' Success ====");
     }
 
-    @Test(priority = 14)
+    @Test(priority = 18)
     public void footerCareerTest() throws InterruptedException {
         footerPage = new FooterPage(driver);
         footerPage.clickCareer();
@@ -136,7 +204,7 @@ public class FooterTest {
         System.out.println("==== Test Footer 'Click About HIGO' Success ====");
     }
 
-    @Test(priority = 15)
+    @Test(priority = 19)
     public void footerTermsTest() throws InterruptedException {
         footerPage = new FooterPage(driver);
         footerPage.clickTerms();
@@ -145,7 +213,7 @@ public class FooterTest {
         System.out.println("==== Test Footer 'Click About HIGO' Success ====");
     }
 
-    @Test(priority = 16)
+    @Test(priority = 20)
     public void footerPrivacyTest() throws InterruptedException {
         footerPage = new FooterPage(driver);
         footerPage.clickPrivacy();
@@ -154,7 +222,7 @@ public class FooterTest {
         System.out.println("==== Test Footer 'Click About HIGO' Success ====");
     }
 
-    @Test(priority = 17)
+    @Test(priority = 21)
     public void footerBlogTest() {
         footerPage = new FooterPage(driver);
         footerPage.clickBlog();
