@@ -3,22 +3,23 @@ package config;
 public class BaseUrl {
 
     // Base Url
-    public static String baseUrl = "https://higo.id";
+    public static String baseUrl = "https://higo.id/";
+    public static String baseUrlEN = "https://higo.id/en/";
 
     // Header Navigation
-    public static String higo_logo = "https://higo.id";
-    public static String blog = "https://blog.higo.id";
-    public static String about_us = baseUrl + "/about-us";
-    public static String case_study = baseUrl + "/case-study";
-    public static String digital_reports = baseUrl + "/annualreport2024";
-    public static String contact_us = baseUrl + "/contact-us";
-    public static String higo_services_wifi = baseUrl + "/wifi-advertising";
-    public static String higo_services_higospot = baseUrl + "/higospot";
-    public static String higo_services_ida = baseUrl + "/integrated-digital-agency";
+    public static String higo_logo = "https://higo.id/";
+    public static String blog = "https://blog.higo.id/";
+    public static String about_us = baseUrl + "about-us";
+    public static String case_study = baseUrl + "case-study";
+    public static String digital_reports = baseUrl + "annualreport2024";
+    public static String contact_us = baseUrl + "contact-us";
+    public static String higo_services_wifi = baseUrl + "wifi-advertising";
+    public static String higo_services_higospot = baseUrl + "higospot";
+    public static String higo_services_ida = baseUrl + "integrated-digital-agency";
 
     // Language
-    public static String higo_lang_id = baseUrl + "/id";
-    public static String higo_lang_en = baseUrl + "/en";
+    public static String higo_lang_id = baseUrl + "id";
+    public static String higo_lang_en = baseUrl + "en";
 
     // Footer
     public static String higo_linkedin = "https://www.linkedin.com/company/pt-higo-fitur-indonesia";
