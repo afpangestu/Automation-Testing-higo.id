@@ -93,7 +93,7 @@ public class FooterTest {
     public void footerWifiTest() throws InterruptedException {
         footerPage = new FooterPage(driver);
         footerPage.clickWifiAdver();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         Assert.assertEquals(driver.getCurrentUrl(), BaseUrl.higo_services_wifi);
         System.out.println("==== Test Footer 'Click WiFi Advertising' Success ====");
     }
@@ -102,7 +102,7 @@ public class FooterTest {
     public void footerHigoSpotTest() throws InterruptedException {
         footerPage = new FooterPage(driver);
         footerPage.clickHigoSpot();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         Assert.assertEquals(driver.getCurrentUrl(), BaseUrl.higo_services_higospot);
         System.out.println("==== Test Footer 'Click HIGOspot' Success ====");
     }
@@ -111,7 +111,7 @@ public class FooterTest {
     public void footerIdaTest() throws InterruptedException {
         footerPage = new FooterPage(driver);
         footerPage.clickIda();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         Assert.assertEquals(driver.getCurrentUrl(), BaseUrl.higo_services_ida);
         System.out.println("==== Test Footer 'Click Integrated Digital Agency' Success ====");
     }
@@ -120,7 +120,7 @@ public class FooterTest {
     public void footerAboutHigoTest() throws InterruptedException {
         footerPage = new FooterPage(driver);
         footerPage.clickAboutHigo();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         Assert.assertEquals(driver.getCurrentUrl(), BaseUrl.about_us);
         System.out.println("==== Test Footer 'Click About HIGO' Success ====");
     }
@@ -129,7 +129,7 @@ public class FooterTest {
     public void footerCareerTest() throws InterruptedException {
         footerPage = new FooterPage(driver);
         footerPage.clickCareer();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         Assert.assertEquals(driver.getCurrentUrl(), BaseUrl.higo_career);
         driver.navigate().back();
         System.out.println("==== Test Footer 'Click About HIGO' Success ====");
@@ -139,7 +139,7 @@ public class FooterTest {
     public void footerTermsTest() throws InterruptedException {
         footerPage = new FooterPage(driver);
         footerPage.clickTerms();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         Assert.assertEquals(driver.getCurrentUrl(), BaseUrl.higo_terms);
         System.out.println("==== Test Footer 'Click About HIGO' Success ====");
     }
@@ -148,20 +148,18 @@ public class FooterTest {
     public void footerPrivacyTest() throws InterruptedException {
         footerPage = new FooterPage(driver);
         footerPage.clickPrivacy();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         Assert.assertEquals(driver.getCurrentUrl(), BaseUrl.higo_privacy);
         System.out.println("==== Test Footer 'Click About HIGO' Success ====");
     }
 
     @Test(priority = 17)
-    public void footerBlogTest() throws InterruptedException {
+    public void footerBlogTest() {
         footerPage = new FooterPage(driver);
         footerPage.clickBlog();
-        Thread.sleep(2000);
         ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
         // move to tab 2
         driver.switchTo().window(tabs.get(1));
-        Thread.sleep(3000);
         // assert the url
         Assert.assertEquals(driver.getCurrentUrl(), BaseUrl.blog);
         // close current tab (blog.higo.id)

@@ -33,8 +33,8 @@ public class FooterPage {
     By wifiAdvertising = By.xpath("//a[contains(text(),'WiFi Advertising')]");
     By higoSpot = By.xpath("//a[contains(text(),'HIGOspot')]");
     By ida = By.xpath("//a[contains(text(),'Integrated Digital Agency')]");
-    By aboutHigo = By.xpath("//a[contains(text(),'Tentang HIGO')]");
-    By career = By.xpath("//a[normalize-space()='Karir']");
+    By aboutHigo = By.xpath("//a[contains(text(),'Tentang HIGO')] | //a[contains(text(),'About HIGO')]");
+    By career = By.xpath("//a[normalize-space()='Karir'] | //a[normalize-space()='Career']");
     By terms = By.xpath("//a[normalize-space()='Terms & Conditions']");
     By privacy = By.xpath("//a[normalize-space()='Privacy & Policy']");
     By blog = By.xpath("//a[contains(text(),'Blog')]");
