@@ -30,4 +30,9 @@ public class BaseUrl {
     public static String higo_career = "https://www.linkedin.com/company/pt-higo-fitur-indonesia";
     public static String higo_terms = baseUrl + "terms-of-use-higospot";
     public static String higo_privacy = baseUrl + "privacy-policy-higospot";
+
+    // Case Study - Item
+    public static String case_study_devon = case_study + "/devon";
+    public static String case_study_abbott = case_study + "/abbott";
+
 }

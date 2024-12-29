@@ -23,4 +23,13 @@ public class Util {
         }
         return obtainedList.size();
     }
+
+    public int getTotalItemBy(By by) {
+        List<String> obtainedList = new ArrayList<>();
+        List<WebElement> elementList = driver.findElements(by);
+        for (WebElement x : elementList) {
+            obtainedList.add(x.getText());
+        }
+        return obtainedList.size();
+    }
 }
