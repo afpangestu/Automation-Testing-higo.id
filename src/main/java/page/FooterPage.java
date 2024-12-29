@@ -11,7 +11,6 @@ public class FooterPage {
 
     WebDriver driver;
     WebDriverWait wait;
-    static String valueAddress;
 
     // constructor
     public FooterPage(WebDriver driver) {
