@@ -24,7 +24,7 @@ public class CaseStudyTest {
         Thread.sleep(2000);
     }
 
-    @Test(priority = 1)
+    @Test(priority = 1, groups = {"unit", "smoke"})
     public void clickAllTest() {
         util = new Util(driver);
         caseStudy = new CaseStudyPage(driver);
@@ -33,7 +33,7 @@ public class CaseStudyTest {
         System.out.println("==== Test Case Study 'All Category' Success ====");
     }
 
-    @Test(priority = 2)
+    @Test(priority = 2, groups = {"unit", "smoke"})
     public void clickWifiAdvertCategoryTest() {
         caseStudy = new CaseStudyPage(driver);
         caseStudy.clickWifi();
@@ -41,7 +41,7 @@ public class CaseStudyTest {
         System.out.println("==== Test Case Study 'WiFi Advertising Category' Success ====");
     }
 
-    @Test(priority = 3)
+    @Test(priority = 3, groups = {"unit", "smoke"})
     public void clickAbbottItemTest() {
         caseStudy = new CaseStudyPage(driver);
         caseStudy.clickAbbottItem();
@@ -50,7 +50,7 @@ public class CaseStudyTest {
         System.out.println("==== Test Case Study 'Abbott Item' Success ====");
     }
 
-    @Test(priority = 4)
+    @Test(priority = 4, groups = {"unit", "smoke"})
     public void clickHigoSpotCategoryTest() {
         caseStudy = new CaseStudyPage(driver);
         caseStudy.clickHIGOspot();
@@ -58,7 +58,7 @@ public class CaseStudyTest {
         System.out.println("==== Test Case Study 'HIGOspot Category' Success ====");
     }
 
-    @Test(priority = 5)
+    @Test(priority = 5, groups = {"unit", "smoke"})
     public void clickDevonItemTest() {
         caseStudy = new CaseStudyPage(driver);
         caseStudy.clickDevonItem();

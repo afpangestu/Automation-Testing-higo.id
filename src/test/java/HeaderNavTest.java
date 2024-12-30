@@ -25,7 +25,7 @@ public class HeaderNavTest {
         Thread.sleep(2000);
     }
 
-    @Test(priority = 1)
+    @Test(priority = 1, groups = {"unit", "smoke"})
     public void navHigoLogoTest() {
         headerNav = new HeaderNavPage(driver);
         headerNav.getHigoLogo();
@@ -35,7 +35,7 @@ public class HeaderNavTest {
         System.out.println("==== Test Header Navigation 'HIGO LOGO' Success ====");
     }
 
-    @Test(priority = 2)
+    @Test(priority = 2, groups = {"unit", "smoke"})
     public void navAboutUsTest() {
         headerNav = new HeaderNavPage(driver);
         headerNav.clickAboutUs();
@@ -44,7 +44,7 @@ public class HeaderNavTest {
         System.out.println("==== Test Header Navigation 'ABOUT' Success ====");
     }
 
-    @Test(priority = 3)
+    @Test(priority = 3, groups = {"unit", "smoke"})
     public void navServiceHigoTest() throws InterruptedException {
         headerNav = new HeaderNavPage(driver);
         headerNav.clickHigoServices();
@@ -63,7 +63,7 @@ public class HeaderNavTest {
         System.out.println("==== Test Header Navigation 'HIGO Services' Success ====");
     }
 
-    @Test(priority = 4)
+    @Test(priority = 4, groups = {"unit", "smoke"})
     public void navCaseStudyTest() {
         headerNav = new HeaderNavPage(driver);
         headerNav.clickCaseStudy();
@@ -72,7 +72,7 @@ public class HeaderNavTest {
         System.out.println("==== Test Header Navigation 'CASE STUDY' Success ====");
     }
 
-    @Test(priority = 5)
+    @Test(priority = 5, groups = {"unit", "smoke"})
     public void navDigitalReportsTest() {
         headerNav = new HeaderNavPage(driver);
         headerNav.clickDigitalReport();
@@ -81,7 +81,7 @@ public class HeaderNavTest {
         System.out.println("==== Test Header Navigation 'Digital Report' Success ====");
     }
 
-    @Test(priority = 6)
+    @Test(priority = 6, groups = {"unit", "smoke"})
     public void navContactUsTest() {
         headerNav = new HeaderNavPage(driver);
         headerNav.clickContactUs();

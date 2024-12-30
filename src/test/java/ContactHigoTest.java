@@ -24,36 +24,36 @@ public class ContactHigoTest {
         Thread.sleep(2000);
     }
 
-    @Test(priority = 1)
+    @Test(priority = 1, groups = {"unit", "smoke"})
     public void contactTitleTest() {
         contactPage = new ContactPage(driver);
         Assert.assertTrue(contactPage.getTitleContact());
         System.out.println("==== Test Contact HIGO 'Heading' Success ====");
     }
 
-    @Test(priority = 2)
+    @Test(priority = 2, groups = {"unit", "smoke"})
     public void contactEmailTest() {
         contactPage = new ContactPage(driver);
         Assert.assertTrue(contactPage.getEmailContact());
         System.out.println("==== Test Contact HIGO 'Email' Success ====");
     }
 
-    @Test(priority = 3)
+    @Test(priority = 3, groups = {"unit", "smoke"})
     public void contactPhoneTest() {
         contactPage = new ContactPage(driver);
         Assert.assertTrue(contactPage.getPhoneContact());
         System.out.println("==== Test Contact HIGO 'Phone Number' Success ====");
     }
 
-    @Test(priority = 4)
+    @Test(priority = 4, groups = {"unit", "smoke"})
     public void contactAddressTest() {
         contactPage = new ContactPage(driver);
         Assert.assertTrue(contactPage.getAddressContact());
         System.out.println("==== Test Contact HIGO 'Address' Success ====");
     }
 
-    @Test(dataProvider = "contact_higo", dataProviderClass = DataProviders.class)
-    public void setService(String name,
+    @Test(dataProvider = "contact_higo", dataProviderClass = DataProviders.class, groups = {"unit", "smoke"})
+    public void contactFormTest(String name,
                            String email,
                            String phone,
                            String company,

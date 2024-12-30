@@ -37,42 +37,42 @@ public class AnnualReportTest {
         Thread.sleep(2000);
     }
 
-    @Test(priority = 1)
+    @Test(priority = 1, groups = {"unit", "smoke"})
     public void annualTitleTest() {
         annual = new AnnualReportPage(driver);
         Assert.assertTrue(annual.getAnnualTxt());
         System.out.println("==== Test Annual Report 'Heading' Success ====");
     }
 
-    @Test(priority = 2)
+    @Test(priority = 2, groups = {"unit", "smoke"})
     public void annualDescTest() {
         annual = new AnnualReportPage(driver);
         Assert.assertTrue(annual.getDescAnnualTxt());
         System.out.println("==== Test Annual Report 'Description' Success ====");
     }
 
-    @Test(priority = 3)
+    @Test(priority = 3, groups = {"unit", "smoke"})
     public void annualImageTest() {
         annual = new AnnualReportPage(driver);
         Assert.assertTrue(annual.getImageAnnual());
         System.out.println("==== Test Annual Report 'Image' Success ====");
     }
 
-    @Test(priority = 4)
+    @Test(priority = 4, groups = {"unit", "smoke"})
     public void annualAllLinkTest() {
         annual = new AnnualReportPage(driver);
         Assert.assertTrue(annual.getAllLinkTxt());
         System.out.println("==== Test Annual Report 'All Link Text' Success ====");
     }
 
-    @Test(priority = 5)
+    @Test(priority = 5, groups = {"unit", "smoke"})
     public void annualAllReferenceTest() {
         annual = new AnnualReportPage(driver);
         Assert.assertTrue(annual.getAllReference());
         System.out.println("==== Test Annual Report 'All References' Success ====");
     }
 
-    @Test(priority = 6, dataProvider = "formdownload")
+    @Test(priority = 6, dataProvider = "formdownload", groups = {"unit", "smoke"})
     public void annualFormDownloadTest(String firstName,
                                        String lastName,
                                        String email,

@@ -24,35 +24,35 @@ public class WifiAdvertisingTest {
         Thread.sleep(2000);
     }
 
-    @Test(priority = 1)
+    @Test(priority = 1, groups = {"unit", "smoke"})
     public void titleWifiAdvertTest() {
         wifi = new WifiAdvertisingPage(driver);
         Assert.assertTrue(wifi.getTitleServiceWifi());
         System.out.println("==== Test WiFi Advertising 'Heading' Success ====");
     }
 
-    @Test(priority = 2)
+    @Test(priority = 2, groups = {"unit", "smoke"})
     public void descWifiAdvertTest() {
         wifi = new WifiAdvertisingPage(driver);
         Assert.assertTrue(wifi.getDescWifi());
         System.out.println("==== Test WiFi Advertising 'Description Wifi Advertising' Success ====");
     }
 
-    @Test(priority = 3)
+    @Test(priority = 3, groups = {"unit", "smoke"})
     public void imgWifiAdvertTest() {
         wifi = new WifiAdvertisingPage(driver);
         Assert.assertTrue(wifi.getImageWifi());
         System.out.println("==== Test WiFi Advertising 'Image Wifi Advertising' Success ====");
     }
 
-    @Test(priority = 4)
+    @Test(priority = 4, groups = {"unit", "smoke"})
     public void footprintTxtTest() {
         wifi = new WifiAdvertisingPage(driver);
         Assert.assertTrue(wifi.getFootprintTxt());
         System.out.println("==== Test WiFi Advertising 'Footprint Heading' Success ====");
     }
 
-    @Test(priority = 5)
+    @Test(priority = 5, groups = {"unit", "smoke"})
     public void footprintListTest() {
         wifi = new WifiAdvertisingPage(driver);
         util = new Util(driver);
@@ -63,14 +63,14 @@ public class WifiAdvertisingTest {
         System.out.println("==== Test WiFi Advertising 'Footprint List' Success ====");
     }
 
-    @Test(priority = 6)
+    @Test(priority = 6, groups = {"unit", "smoke"})
     public void userApproachTxtTest() {
         wifi = new WifiAdvertisingPage(driver);
         Assert.assertTrue(wifi.getUserApproachTxt());
         System.out.println("==== Test WiFi Advertising 'Approach Heading' Success ====");
     }
 
-    @Test(priority = 7)
+    @Test(priority = 7, groups = {"unit", "smoke"})
     public void userApproachListTest() {
         wifi = new WifiAdvertisingPage(driver);
         util = new Util(driver);
@@ -81,14 +81,14 @@ public class WifiAdvertisingTest {
         System.out.println("==== Test WiFi Advertising 'Approach List' Success ====");
     }
 
-    @Test(priority = 8)
+    @Test(priority = 8, groups = {"unit", "smoke"})
     public void benefitsTxtTest() {
         wifi = new WifiAdvertisingPage(driver);
         Assert.assertTrue(wifi.getBenefitsTxt());
         System.out.println("==== Test WiFi Advertising 'Benefit Heading' Success ====");
     }
 
-    @Test(priority = 9)
+    @Test(priority = 9, groups = {"unit", "smoke"})
     public void benefitsListTest() {
         wifi = new WifiAdvertisingPage(driver);
         int totalItem = util.getTotalItem("//div[@class='grid gap-y-14 py-16 grid-popout @2xl/page:py-40 @3xl/page:py-32']//ul//li");
@@ -98,7 +98,7 @@ public class WifiAdvertisingTest {
         System.out.println("==== Test WiFi Advertising 'Benefit List' Success ====");
     }
 
-    @Test(priority = 10)
+    @Test(priority = 10, groups = {"unit", "smoke"})
     public void clickBtnAdvertiseNowTest() throws InterruptedException {
         wifi = new WifiAdvertisingPage(driver);
         wifi.clickBtnAdvertiseNow();

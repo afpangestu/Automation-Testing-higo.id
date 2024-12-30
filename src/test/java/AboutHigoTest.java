@@ -22,56 +22,56 @@ public class AboutHigoTest {
         Thread.sleep(2000);
     }
 
-    @Test(priority = 1)
+    @Test(priority = 1, groups = {"unit", "smoke"})
     public void titleAboutTest() {
         aboutPage = new AboutPage(driver);
         Assert.assertTrue(aboutPage.getTitleAboutHigo());
         System.out.println("==== Test About HIGO 'Heading' Success ====");
     }
 
-    @Test(priority = 2)
+    @Test(priority = 2, groups = {"unit", "smoke"})
     public void descAboutTest() {
         aboutPage = new AboutPage(driver);
         Assert.assertTrue(aboutPage.getDescHigo());
         System.out.println("==== Test About HIGO 'Description About' Success ====");
     }
 
-    @Test(priority = 3)
+    @Test(priority = 3, groups = {"unit", "smoke"})
     public void imgAboutTest() {
         aboutPage = new AboutPage(driver);
         Assert.assertTrue(aboutPage.getImageAbout());
         System.out.println("==== Test About HIGO 'Image About' Success ====");
     }
 
-    @Test(priority = 4)
+    @Test(priority = 4, groups = {"unit", "smoke"})
     public void getSixYearsTxtTest() {
         aboutPage = new AboutPage(driver);
         Assert.assertTrue(aboutPage.getSixYearsTxt());
         System.out.println("==== Test About HIGO '6 years Heading' Success ====");
     }
 
-    @Test(priority = 5)
+    @Test(priority = 5, groups = {"unit", "smoke"})
     public void getCoreValueTxtTest() {
         aboutPage = new AboutPage(driver);
         Assert.assertTrue(aboutPage.getCoreValueTxt());
         System.out.println("==== Test About HIGO 'Core Value Heading' Success ====");
     }
 
-    @Test(priority = 6)
+    @Test(priority = 6, groups = {"unit", "smoke"})
     public void getGrowTxtTest() {
         aboutPage = new AboutPage(driver);
         Assert.assertTrue(aboutPage.getGrowTxt());
         System.out.println("==== Test About HIGO 'Grow Together Heading' Success ====");
     }
 
-    @Test(priority = 7)
+    @Test(priority = 7, groups = {"unit", "smoke"})
     public void getImageGrowTest() {
         aboutPage = new AboutPage(driver);
         Assert.assertTrue(aboutPage.getImageGrow());
         System.out.println("==== Test About HIGO 'Grow Together Image' Success ====");
     }
 
-    @Test(priority = 8)
+    @Test(priority = 8, groups = {"unit", "smoke"})
     public void clickBtnBePartHigoTest() throws InterruptedException {
         aboutPage = new AboutPage(driver);
         aboutPage.clickBtnBePartHigo();
