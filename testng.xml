@@ -19,6 +19,7 @@
             <class name="CaseStudyTest"/>
             <class name="ContactHigoTest"/>
             <class name="BlogHigoTest"/>
+            <class name="BlogHigoDetailTest"/>
         </classes>
     </test>
 </suite>
