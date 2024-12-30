@@ -16,7 +16,7 @@ public class BlogHigoDetailTest {
     WebDriver driver;
     BlogHigoPage blogHigo;
 
-    @BeforeClass
+    @BeforeClass(groups = {"unit", "smoke"})
     public void setup() {
         // open browser and url
         driver = new ChromeDriver();
@@ -25,7 +25,7 @@ public class BlogHigoDetailTest {
         Assert.assertEquals(driver.getCurrentUrl(), BaseUrl.articleUrl);
     }
 
-    @Test(priority = 1, dataProvider = "normal_comment", dataProviderClass = DataProviders.class)
+    @Test(priority = 1, dataProvider = "normal_comment", dataProviderClass = DataProviders.class, groups = {"unit", "smoke"})
     public void blogCommentTest(String name, String comment) throws InterruptedException {
         blogHigo = new BlogHigoPage(driver);
         // check current total comment
@@ -51,7 +51,7 @@ public class BlogHigoDetailTest {
         return Integer.parseInt(currentTotal);
     }
 
-    @Test(priority = 2)
+    @Test(priority = 2, groups = {"unit", "smoke"})
     public void getCurrentTime() {
         blogHigo = new BlogHigoPage(driver);
         String dateComment = blogHigo.getDateTimeComment();
@@ -67,7 +67,7 @@ public class BlogHigoDetailTest {
         System.out.println("==== Test Blog HIGO 'Date Comment' Success ====");
     }
 
-    @Test(priority = 3)
+    @Test(priority = 3, groups = {"unit", "smoke"})
     public void blogLikeCommentTest() throws InterruptedException {
         blogHigo = new BlogHigoPage(driver);
         int total = 0;
@@ -88,7 +88,7 @@ public class BlogHigoDetailTest {
         Assert.assertEquals(afterTotal, currentTotal);
     }
 
-    @AfterClass
+    @AfterClass(groups = {"unit", "smoke"})
     public void quit() {
         if (driver != null) {
             driver.quit();

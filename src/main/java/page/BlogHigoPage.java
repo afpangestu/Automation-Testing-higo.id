@@ -20,7 +20,8 @@ public class BlogHigoPage {
 
     // locator
     // Artikel terbaru
-    By latestArticle = By.xpath("/html/body/main/div/section/div/div[1]/ul/li/a/div[1]/img");
+//    By latestArticle = By.xpath("/html/body/main/div/section/div/div[1]/ul/li/a/div[1]/img");
+    By latestArticle = By.xpath("//h6[normalize-space()='5 Cara Menghasilkan Uang dengan Ponsel']");
     By dateLatestArticle = By.xpath("//time[normalize-space()='21 Nov 2024']");
     By dateDetailLatestArticle = By.xpath("//time[@pubdate='pubdate']");
 

@@ -80,7 +80,7 @@ public class AboutHigoTest {
         System.out.println("==== Test About HIGO 'Click Button Be Part HIGO' Success ====");
     }
 
-    @AfterClass
+    @AfterClass(groups = {"unit", "smoke"})
     public void quit() {
         if (driver != null) {
             driver.quit();

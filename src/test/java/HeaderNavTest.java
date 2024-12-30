@@ -109,7 +109,7 @@ public class HeaderNavTest {
         System.out.println("==== Test Header Navigation 'CASE STUDY' Success ====");
     }
 
-    @AfterClass
+    @AfterClass(groups = {"unit", "smoke"})
     public void quit() {
         if (driver != null) {
             driver.quit();

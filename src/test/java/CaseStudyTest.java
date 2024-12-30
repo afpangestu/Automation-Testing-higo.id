@@ -67,7 +67,7 @@ public class CaseStudyTest {
         System.out.println("==== Test Case Study 'Devon Item' Success ====");
     }
 
-    @AfterClass
+    @AfterClass(groups = {"unit", "smoke"})
     public void quit() {
         if (driver != null) {
             driver.quit();

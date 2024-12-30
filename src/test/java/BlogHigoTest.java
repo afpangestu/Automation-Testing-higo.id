@@ -23,7 +23,7 @@ public class BlogHigoTest {
         Thread.sleep(2000);
     }
 
-    @Test(groups = {"unit", "smoke"})
+    @Test(priority = 1, groups = {"unit", "smoke"})
     public void blogLatestArticleTest() throws InterruptedException {
         blogHigo = new BlogHigoPage(driver);
         blogHigo.clickLatestArticle();
@@ -35,7 +35,7 @@ public class BlogHigoTest {
         System.out.println("==== Test Blog 'Latest Article' Success ====");
     }
 
-    @Test(groups = {"unit", "smoke"})
+    @Test(priority = 2, groups = {"unit", "smoke"})
     public void blogCategoryTest() {
         blogHigo = new BlogHigoPage(driver);
         blogHigo.clickCategoryHIGOes();
@@ -45,7 +45,7 @@ public class BlogHigoTest {
         System.out.println("==== Test Blog 'Category Article' Success ====");
     }
 
-    @Test(groups = {"unit", "smoke"})
+    @Test(priority = 3, groups = {"unit", "smoke"})
     public void blogMoreArticleTest() {
         blogHigo = new BlogHigoPage(driver);
         blogHigo.clickMoreArticle();
@@ -53,7 +53,7 @@ public class BlogHigoTest {
         System.out.println("==== Test Blog 'More Article' Success ====");
     }
 
-    @Test(groups = {"unit", "smoke"})
+    @Test(priority = 4, groups = {"unit", "smoke"})
     public void blogCommentTest() {
         blogHigo = new BlogHigoPage(driver);
         blogHigo.clickArticle();
@@ -62,7 +62,7 @@ public class BlogHigoTest {
         blogHigo.clickSubmitComment();
     }
 
-    @AfterClass
+    @AfterClass(groups = {"unit", "smoke"})
     public void quit() {
         if (driver != null) {
             driver.quit();

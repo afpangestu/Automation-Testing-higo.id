@@ -107,7 +107,7 @@ public class WifiAdvertisingTest {
         System.out.println("==== Test WiFi Advertising 'Click Button Advertise Now' Success ====");
     }
 
-    @AfterClass
+    @AfterClass(groups = {"unit", "smoke"})
     public void quit() {
         if (driver != null) {
             driver.quit();
