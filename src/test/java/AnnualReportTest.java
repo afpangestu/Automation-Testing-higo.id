@@ -3,6 +3,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -23,7 +24,7 @@ public class AnnualReportTest {
         };
     }
 
-    @BeforeClass
+    @BeforeClass(groups = {"unit", "smoke"})
     public void setup() throws InterruptedException {
         // open browser and url
         ChromeOptions chromeOptions = new ChromeOptions();
@@ -111,6 +112,13 @@ public class AnnualReportTest {
                 annual.clearAllInput();
                 System.out.println("==== Test Download Annual Report 'Valid Data' Success ====");
             }
+        }
+    }
+
+    @AfterClass
+    public void quit() {
+        if (driver != null) {
+            driver.quit();
         }
     }
 }

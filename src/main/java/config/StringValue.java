@@ -30,4 +30,7 @@ public class StringValue {
     public static String footerTxtPhone = "P: (021) 5806860";
     public static String footerLinkTxtPhone = "tel:0215806860";
     public static String footerTxtCopyright = "© PT HIGO Fitur Indonesia 2024";
+
+    // Blog
+    public static String latestArticleTxt = "5 Cara Menghasilkan Uang dengan Ponsel";
 }

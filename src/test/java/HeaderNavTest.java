@@ -16,7 +16,7 @@ public class HeaderNavTest {
     WebDriver driver;
     HeaderNavPage headerNav;
 
-    @BeforeClass
+    @BeforeClass(groups = {"unit", "smoke"})
     public void setup() throws InterruptedException {
         // open browser and url
         driver = new ChromeDriver();

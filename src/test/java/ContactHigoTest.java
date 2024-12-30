@@ -13,7 +13,7 @@ public class ContactHigoTest {
     WebDriver driver;
     ContactPage contactPage;
 
-    @BeforeClass
+    @BeforeClass(groups = {"unit", "smoke"})
     public void setup() throws InterruptedException {
         // open browser and url
         driver = new ChromeDriver();

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test">
-    <test name="higo.id test">
+    <listeners>
+        <listener class-name="util.ExtentReportManager"/>
+    </listeners>
+    <test name="higo.id and blog.higo.id test">
         <groups>
             <run>
                 <include name="smoke"/>
@@ -12,14 +15,9 @@
             <class name="FooterTest"/>
             <class name="AboutHigoTest"/>
             <class name="AnnualReportTest"/>
-            <class name="BlogHigoTest"/>
             <class name="WifiAdvertisingTest"/>
             <class name="CaseStudyTest"/>
-        </classes>
-    </test>
-
-    <test name="blog.higo.id test">
-        <classes>
+            <class name="ContactHigoTest"/>
             <class name="BlogHigoTest"/>
         </classes>
     </test>

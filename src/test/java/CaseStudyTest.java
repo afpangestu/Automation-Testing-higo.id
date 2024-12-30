@@ -13,7 +13,7 @@ public class CaseStudyTest {
     CaseStudyPage caseStudy;
     Util util;
 
-    @BeforeClass
+    @BeforeClass(groups = {"unit", "smoke"})
     public void setup() throws InterruptedException {
         // open browser and url
         driver = new ChromeDriver();

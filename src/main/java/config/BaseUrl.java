@@ -35,4 +35,14 @@ public class BaseUrl {
     public static String case_study_devon = case_study + "/devon";
     public static String case_study_abbott = case_study + "/abbott";
 
+    // Blog
+    public static String latestArticleUrl = blog + "5-cara-menghasilkan-uang-dengan-ponsel";
+    public static String articleUrl = blog + "tips-menjangkau-non-followers-dengan-reels";
+
+//    tips-menjangkau-non-followers-dengan-reels
+//    mengenal-sosok-della-ayu-content-creator-yang-begitu-cinta-kopi
+//    masih-perlukah-teknik-fear-mongering-pada-iklan
+//    cara-umkm-dapetin-10.000-follower-dalam-waktu-30-hari
+//    cara-optimasi-seo-tiktok-untuk-tingkatkan-reach-konten-di-2023
+
 }
