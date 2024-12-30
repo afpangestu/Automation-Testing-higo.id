@@ -13,12 +13,14 @@ public class BlogHigoTest {
     BlogHigoPage blogHigo;
 
     @BeforeClass(groups = {"unit", "smoke"})
-    public void setup() {
+    public void setup() throws InterruptedException {
         // open browser and url
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get(BaseUrl.blog);
         Assert.assertEquals(driver.getCurrentUrl(),BaseUrl.blog);
+        driver.switchTo().activeElement().click();
+        Thread.sleep(2000);
     }
 
     @Test(groups = {"unit", "smoke"})
