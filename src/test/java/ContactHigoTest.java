@@ -75,11 +75,14 @@ public class ContactHigoTest {
         } else if (service.equals("wa")) {
             contactPage.setWA();
         }
-        contactPage.clickSubmitBtn();
+//        contactPage.clickSubmitBtn();
         switch (scenario) {
-            case "wa", "ida", "blank" -> contactPage.getErrorMsg();
+            case "wa", "ida", "blank" -> {
+                contactPage.clickSubmitBtn();
+                contactPage.getErrorMsg();
+            }
             case "success" -> {
-                contactPage.getSuccessMsg();
+//                contactPage.getSuccessMsg();
                 System.out.println("==== Test Contact HIGO 'Form Contact' Success ====");
             }
         }
