@@ -1,5 +1,6 @@
 import config.BaseUrl;
 import config.StringValue;
+import org.openqa.selenium.chrome.ChromeOptions;
 import page.HeaderNavPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,7 +20,9 @@ public class HeaderNavTest {
     @BeforeClass(groups = {"unit", "smoke"})
     public void setup() throws InterruptedException {
         // open browser and url
-        driver = new ChromeDriver();
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--headless");
+        driver = new ChromeDriver(chromeOptions);
         driver.manage().window().maximize();
         driver.get(BaseUrl.baseUrl);
         Assert.assertEquals(driver.getCurrentUrl(),BaseUrl.baseUrl);
