@@ -8,6 +8,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
+
 
 public class HeaderNavTest {
 
@@ -88,6 +90,23 @@ public class HeaderNavTest {
         Assert.assertEquals(driver.getCurrentUrl(), BaseUrl.contact_us);
         Assert.assertEquals(driver.getTitle(), StringValue.titleTxtContactUs);
         System.out.println("==== Test Header Navigation 'Contact Us' Success ====");
+    }
+
+    @Test(priority = 7, groups = {"unit", "smoke"})
+    public void navBlogHIGO() throws InterruptedException {
+        headerNav = new HeaderNavPage(driver);
+        headerNav.clickBlog();
+        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
+        // move to tab 2
+        driver.switchTo().window(tabs.get(1));
+        Thread.sleep(1000);
+        Assert.assertEquals(driver.getCurrentUrl(), BaseUrl.blog);
+        Assert.assertEquals(driver.getTitle(), StringValue.titleTxtBlog);
+        // close current tab (blog.higo.id)
+        driver.close();
+        // move to first tab (higo.id)
+        driver.switchTo().window(tabs.get(0));
+        System.out.println("==== Test Header Navigation 'CASE STUDY' Success ====");
     }
 
     @AfterClass

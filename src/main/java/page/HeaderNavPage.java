@@ -24,6 +24,7 @@ public class HeaderNavPage {
     By higoLogo = By.xpath("//a[@aria-label='HIGO']//*[name()='svg']");
     By aboutUs = By.xpath("//label[@class='peer-checked:hidden']//span[contains(text(),'Tentang HIGO')]");
     By caseStudy = By.xpath("//label[@for='navigation-case-study']");
+    By blog = By.xpath("//label[@class='peer-checked:hidden']//span[contains(text(),'Blog')]");
     By higoServices = By.xpath("/html[1]/body[1]/header[1]/div[1]/div[1]/nav[1]/ul[1]/li[2]/label[1]/div[1]/span[1]");
     By serviceWA = By.xpath("//span[contains(text(),'WiFi Advertising')]");
     By serviceHIGOspot = By.xpath("//label[@class='peer-checked:hidden']//span[contains(text(),'HIGOspot')]");
@@ -46,6 +47,10 @@ public class HeaderNavPage {
 
     public void clickCaseStudy() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(caseStudy)).click();
+    }
+
+    public void clickBlog() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(blog)).click();
     }
 
     public void clickHigoServices() {

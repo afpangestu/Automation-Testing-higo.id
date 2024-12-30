@@ -15,6 +15,8 @@ public class StringValue {
     public static String titleTxtCaseStudyEN = "HIGO | Case Study";
     public static String titleTxtCaseStudy = "HIGO | Studi Kasus";
 
+    public static String titleTxtBlog = "Artikel Seputar Teknologi, Digital Marketing, dan Tips Bisnis";
+
     public static String titleTxtDigitalReport = "HIGO | Annual Report";
 
     public static String titleTxtContactUsEN = "HIGO | Contact Us";
