@@ -37,12 +37,14 @@ public class BaseUrl {
 
     // Blog
     public static String latestArticleUrl = blog + "5-cara-menghasilkan-uang-dengan-ponsel";
-    public static String articleUrl = blog + "tips-menjangkau-non-followers-dengan-reels";
+    public static String articleUrl = blog + "7-alasan-umkm-harus-paham-tujuan-dari-punya-social-media";
 
 //    tips-menjangkau-non-followers-dengan-reels
 //    mengenal-sosok-della-ayu-content-creator-yang-begitu-cinta-kopi
 //    masih-perlukah-teknik-fear-mongering-pada-iklan
 //    cara-umkm-dapetin-10.000-follower-dalam-waktu-30-hari
-//    cara-optimasi-seo-tiktok-untuk-tingkatkan-reach-konten-di-2023
 
+//    commented :
+//    cara-mengamankan-data-dari-serangan-hacker
+//    cara-optimasi-seo-tiktok-untuk-tingkatkan-reach-konten-di-2023
 }

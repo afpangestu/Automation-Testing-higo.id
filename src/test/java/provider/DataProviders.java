@@ -61,4 +61,22 @@ public class DataProviders {
         }
         return apidata;
     }
+
+    @DataProvider(name="normal_comment")
+    public String[][] normalComment() throws IOException {
+        String path=System.getProperty("user.dir")+dataDir;
+        ExcelUtil xl = new ExcelUtil(path);
+
+        int rownum = xl.getRowCount("NormalComment");
+        int colcount = xl.getCellCount("NormalComment",1);
+
+        String apidata[][] = new String[rownum][colcount];
+
+        for(int i=1;i<=rownum;i++) {
+            for(int j=0;j<colcount;j++) {
+                apidata[i-1][j]=xl.getCellData("NormalComment", i, j);
+            }
+        }
+        return apidata;
+    }
 }

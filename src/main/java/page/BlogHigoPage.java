@@ -42,6 +42,16 @@ public class BlogHigoPage {
     By commentMsg = By.xpath("//*[@placeholder='Tulis Komentar Kamu'][@name='comment']");
     By commentSubmit = By.xpath("//*[@type='submit'][normalize-space()='Kirim']");
 
+    // Blog HIGO Detail
+    // Total Comment
+    By totalComment = By.xpath("//h6[@class='text-xl font-bold text-primary @2xl/section:text-2xl'][contains(text(),'Komentar')]");
+
+    // Time Comment
+    By timeComment = By.xpath("(//time[@class='text-sm text-gray-400'])[1]");
+
+    // Total Like
+    By likeBtn = By.xpath("/html/body/main/div/div[2]/section[4]/div/div[1]/footer/button[1]");
+
     //methods
     public void clickLatestArticle() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(latestArticle)).click();
@@ -93,5 +103,21 @@ public class BlogHigoPage {
 
     public void clickSubmitComment() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(commentSubmit)).click();
+    }
+
+    public String getTotalComment() {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(totalComment)).getText();
+    }
+
+    public String getDateTimeComment() {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(timeComment)).getText();
+    }
+
+    public String getTotalLikeComment() {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(likeBtn)).getText();
+    }
+
+    public void clickLikeComment() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(likeBtn)).click();
     }
 }
