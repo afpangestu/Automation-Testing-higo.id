@@ -13,7 +13,6 @@ public class BlogHigoTest {
 
     @BeforeClass
     public void setup() {
-        HeaderNavPage headerNav = new HeaderNavPage(driver);
         // open browser and url
         driver = new ChromeDriver();
         driver.manage().window().maximize();
