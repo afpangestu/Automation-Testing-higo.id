@@ -32,5 +32,5 @@ public class StringValue {
     public static String footerTxtCopyright = "© PT HIGO Fitur Indonesia 2024";
 
     // Blog
-    public static String latestArticleTxt = "5 Cara Menghasilkan Uang dengan Ponsel";
+    public static String latestArticleTxt = "Video Hook: Cara Jitu Menarik Perhatian Audiens";
 }

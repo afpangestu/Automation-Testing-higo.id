@@ -36,7 +36,7 @@ public class BaseUrl {
     public static String case_study_abbott = case_study + "/abbott";
 
     // Blog
-    public static String latestArticleUrl = blog + "5-cara-menghasilkan-uang-dengan-ponsel";
+    public static String latestArticleUrl = blog + "video-hook-cara-jitu-menarik-perhatian-audiens";
     public static String articleUrl = blog + "7-alasan-umkm-harus-paham-tujuan-dari-punya-social-media";
 
 //    tips-menjangkau-non-followers-dengan-reels
