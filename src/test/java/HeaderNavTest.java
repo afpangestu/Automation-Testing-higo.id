@@ -20,9 +20,9 @@ public class HeaderNavTest {
     @BeforeClass(groups = {"unit", "smoke"})
     public void setup() throws InterruptedException {
         // open browser and url
-//        ChromeOptions chromeOptions = new ChromeOptions();
-//        chromeOptions.addArguments("--headless");
-        driver = new ChromeDriver();
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--headless");
+        driver = new ChromeDriver(chromeOptions);
         driver.manage().window().maximize();
         driver.get(BaseUrl.baseUrl);
         Assert.assertEquals(driver.getCurrentUrl(),BaseUrl.baseUrl);
