@@ -17,9 +17,9 @@ public class ContactHigoTest {
     @BeforeClass(groups = {"unit", "smoke"})
     public void setup() throws InterruptedException {
         // open browser and url
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--headless");
-        driver = new ChromeDriver(chromeOptions);
+//        ChromeOptions chromeOptions = new ChromeOptions();
+//        chromeOptions.addArguments("--headless");
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get(BaseUrl.contact_us);
         Assert.assertEquals(driver.getCurrentUrl(),BaseUrl.contact_us);

@@ -20,9 +20,9 @@ public class BlogHigoDetailTest {
     @BeforeClass(groups = {"unit", "smoke"})
     public void setup() {
         // open browser and url
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--headless");
-        driver = new ChromeDriver(chromeOptions);
+//        ChromeOptions chromeOptions = new ChromeOptions();
+//        chromeOptions.addArguments("--headless");
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get(BaseUrl.articleUrl);
         Assert.assertEquals(driver.getCurrentUrl(), BaseUrl.articleUrl);
